@@ -1,0 +1,87 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #0d0f2b;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+#game-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #12163b;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin-top: 50px;
+}
+
+#plinko-board {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    background-color: #1b1f44;
+    margin-top: 20px;
+    border: 2px solid #30355b;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#multiplier-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+.multiplier {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 10px;
+    color: black;
+}
+
+.multiplier.x1000 { background-color: #ff0000; } /* Bright red */
+.multiplier.x10 { background-color: #ff5733; }   /* Lighter red */
+.multiplier.x2 { background-color: #ff8c00; }    /* Orange */
+.multiplier.x0_5, .multiplier.x0_2 { background-color: #ffcb3c; } /* Yellow */
+
+.obstacle {
+    width: 12px;
+    height: 12px;
+    background-color: #ffffff;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.ball {
+    width: 16px;
+    height: 16px;
+    background-color: #f58220;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure the ball is above other elements */
+    transition: left 0.02s ease, top 0.02s ease; /* Smooth movement */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ffcb3c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+}
+
+button:hover {
+    background-color: #e6b233;
+}
